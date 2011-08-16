@@ -1,0 +1,11 @@
+--- pygooglevoice-0.5/googlevoice/util.py	2009-12-11 07:52:39.000000000 -0500
++++ pygooglevoice-0.5-new/googlevoice/util.py	2011-08-12 23:39:07.396277628 -0400
+@@ -299,7 +299,7 @@
+         """
+         Returns associated ``Folder`` instance for given page (``self.name``)
+         """
+-        return Folder(self.voice, self.name, self.data)        
++        return (self.html, Folder(self.voice, self.name, self.data))
+     folder = property(folder)
+     
+     def data(self):
